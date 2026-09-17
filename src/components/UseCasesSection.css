@@ -1,0 +1,158 @@
+.use-cases {
+  display: flex;
+  height: 27.2rem; /* 435px @1440 */
+  background: var(--navy-panel-b);
+}
+
+.use-panel {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.use-panel--patients {
+  flex: 0 0 52.38%;
+  background-image: url('../assets/images/use-patients-bg.jpg');
+  border-right: 3px solid #e0ab34;
+}
+
+.use-panel--team {
+  flex: 1 1 auto;
+  background-image: url('../assets/images/use-team-bg.jpg');
+}
+
+.use-panel__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 3.05rem;
+}
+
+.use-panel--patients .use-panel__content {
+  padding-left: 4.9rem; /* 78px */
+}
+
+.use-panel--team .use-panel__content {
+  padding-left: 3.65rem; /* 58px */
+}
+
+.use-panel__doctor {
+  display: none;
+}
+
+.use-panel__kicker {
+  font-size: 1.09rem; /* 17.4px */
+  letter-spacing: 0.325em;
+  color: var(--gold-300);
+}
+
+.use-panel__title {
+  margin-top: 0.6rem;
+  font-size: 2.75rem; /* 44px */
+  line-height: 2.875rem; /* 46px */
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+
+.use-panel__title .is-light {
+  color: var(--blue-200);
+}
+
+.use-list {
+  margin-top: 1.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.use-list li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.3rem; /* 20.8px */
+  line-height: 1.72rem;
+  color: var(--white);
+}
+
+.use-list img {
+  width: 1.81rem; /* 29px */
+  height: auto;
+  margin-right: 1.04rem;
+  margin-top: 0.12rem;
+  flex: none;
+}
+
+.use-panel--team .use-list {
+  gap: 1.4rem;
+}
+
+.use-panel--team .use-list li {
+  max-width: 25.35rem;
+}
+
+@media (max-width: 1024px) {
+  .use-panel__title {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+
+  .use-list li {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .use-cases {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .use-panel--patients {
+    flex: none;
+    border-right: 0;
+    border-bottom: 3px solid #e0ab34;
+    background-image: linear-gradient(135deg, var(--navy-panel-a), var(--navy-panel-b));
+  }
+
+  .use-panel--team {
+    flex: none;
+    background-position: 70% center;
+  }
+
+  .use-panel__content {
+    padding: 2.25rem 1.25rem 2rem !important;
+  }
+
+  .use-panel__doctor {
+    display: block;
+    width: 62%;
+    max-width: 17rem;
+    margin: -1.5rem 0 0 auto;
+  }
+
+  .use-panel__kicker {
+    font-size: 0.78rem;
+    letter-spacing: 0.24em;
+  }
+
+  .use-panel__title {
+    margin-top: 0.6rem;
+    font-size: 1.65rem;
+    line-height: 1.95rem;
+  }
+
+  .use-list {
+    margin-top: 1.25rem;
+    gap: 0.9rem !important;
+  }
+
+  .use-list li {
+    font-size: 0.98rem;
+    line-height: 1.35rem;
+    max-width: none !important;
+  }
+
+  .use-list img {
+    width: 1.15rem;
+    margin-right: 0.7rem;
+  }
+}

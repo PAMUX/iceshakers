@@ -1,0 +1,72 @@
+.colors {
+  background: var(--cream);
+  padding: 1.66rem 0 1.7rem;
+}
+
+.colors__inner {
+  padding: 0 2.125rem;
+}
+
+.colors__row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 84.4rem; /* 1351px */
+  margin: 0.05rem auto 0;
+}
+
+.color-swatch {
+  text-align: center;
+}
+
+.color-swatch__media {
+  height: 15.6rem; /* 250px */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.color-swatch__media img {
+  max-height: 100%;
+  width: auto;
+}
+
+.color-swatch__name {
+  margin-top: 0.37rem;
+  font-size: 1.32rem; /* 21.1px */
+  font-weight: 700;
+  color: var(--ink-900);
+}
+
+@media (max-width: 1024px) {
+  .colors {
+    padding: 2rem 0 2.25rem;
+  }
+
+  .colors__inner {
+    padding: 0 1.25rem;
+  }
+
+  .colors__row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .color-swatch__media {
+    height: 9rem;
+  }
+
+  .color-swatch__name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .colors__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .color-swatch:last-child {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,152 @@
+.footer {
+  background: var(--navy-900);
+  color: var(--white);
+  height: 12rem; /* 192px @1440 */
+}
+
+.footer__inner {
+  height: 100%;
+  padding: 1.5rem 4.94rem 0 4.98rem;
+}
+
+.footer__top {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer__logo {
+  width: 13.75rem; /* 220px */
+  height: auto;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  margin-top: 1.15rem;
+}
+
+.footer__socials img {
+  height: 1.94rem;
+  width: auto;
+  opacity: 0.95;
+  transition: opacity 0.15s ease;
+}
+
+.footer__socials a:hover img {
+  opacity: 0.7;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 1.7rem 0 0 auto;
+  font-size: 1.09rem; /* 17.5px */
+  font-weight: 500;
+}
+
+.footer__nav a {
+  transition: opacity 0.15s ease;
+}
+
+.footer__nav a:hover {
+  opacity: 0.75;
+}
+
+.footer__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 14.4rem; /* 230px */
+  height: 3.1rem; /* 50px */
+  margin: 0.65rem 0 0 8.7rem;
+  border-radius: 0.3rem;
+  background: var(--blue-600);
+  color: var(--white);
+  font-size: 1.19rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: background 0.15s ease;
+}
+
+.footer__cta:hover {
+  background: #0a5ea9;
+}
+
+.footer__rule {
+  height: 2px;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.65rem;
+  font-size: 1.04rem; /* 16.7px */
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 1024px) {
+  .footer__nav {
+    gap: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .footer__cta {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    height: auto;
+    padding: 1.75rem 0 1.5rem;
+  }
+
+  .footer__inner {
+    padding: 0 1.25rem;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .footer__logo {
+    width: 10rem;
+  }
+
+  .footer__socials {
+    gap: 1.1rem;
+    margin-top: 0.9rem;
+  }
+
+  .footer__socials img {
+    height: 1.35rem;
+  }
+
+  .footer__nav {
+    flex-wrap: wrap;
+    gap: 0.9rem 1.5rem;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .footer__cta {
+    width: 11.5rem;
+    height: 2.75rem;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    margin-top: 0.9rem;
+  }
+}

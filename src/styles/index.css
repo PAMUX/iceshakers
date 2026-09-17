@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Design tokens + base
+   The desktop layout is authored against a 1440px reference frame taken from
+   the reference screenshots. 1rem = 16px at 1440px and scales with the
+   viewport below that, so proportions hold at every desktop width.
+   ========================================================================== */
+
+:root {
+  /* brand colours sampled from the reference screenshots */
+  --navy-900: #002544; /* footer */
+  --navy-800: #023059; /* announcement bar */
+  --navy-700: #00386b; /* hero primary button */
+  --navy-600: #004382; /* submit button */
+  --navy-panel-a: #003a6d;
+  --navy-panel-b: #002a4f;
+  --blue-500: #0076c8; /* header cta */
+  --blue-600: #006bc4; /* footer cta */
+  --blue-200: #a9d6f5; /* highlighted heading words */
+  --ink-900: #071738;
+  --ink-800: #10263f;
+  --ink-700: #152b4e;
+  --ink-600: #212841;
+  --gold-600: #ac8327;
+  --gold-500: #b5821f;
+  --gold-400: #c79a2e;
+  --gold-300: #e8c268;
+  --cream: #f6f3ee;
+  --paper: #f8f8f6;
+  --white: #ffffff;
+  --near-white: #fcfcfc;
+  --rule: #e2e4e6;
+  --field-rule: #e4e6e9;
+  --placeholder: #9aa1a9;
+
+  --font-sans: 'Figtree', 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-serif: 'DM Serif Display', 'Times New Roman', Georgia, serif;
+
+  --shadow-card: 0 2px 14px rgba(15, 30, 55, 0.07);
+  --shadow-panel: 0 6px 26px rgba(15, 30, 55, 0.1);
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: calc(100vw / 90);
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink-700);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.shell {
+  width: 100%;
+  max-width: 90rem; /* 1440px */
+  margin: 0 auto;
+}
+
+/* shared serif display heading */
+.display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--ink-900);
+  letter-spacing: 0.005em;
+  line-height: 1.04;
+}
+
+.kicker {
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

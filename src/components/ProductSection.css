@@ -1,0 +1,132 @@
+.products {
+  background: var(--near-white);
+  padding: 1.375rem 0 1.225rem;
+}
+
+.products__inner {
+  padding: 0 2.125rem; /* 34px */
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.375rem; /* 22px */
+  margin-top: 1.275rem;
+}
+
+.product-card {
+  position: relative;
+  background: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 13px rgba(18, 38, 66, 0.07);
+  height: 28.9rem; /* 462px */
+  padding: 0.36rem 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  box-shadow: 0 8px 26px rgba(18, 38, 66, 0.13);
+  transform: translateY(-2px);
+}
+
+.product-card__hit {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+.product-card__hit:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 2px;
+}
+
+.product-card__media {
+  width: 100%;
+  height: 21.36rem; /* 342px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__media img {
+  width: 19.9rem; /* 318px */
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card__name {
+  margin-top: -0.21rem;
+  font-size: 1.6875rem; /* 27px */
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--ink-900);
+}
+
+.product-card__copy {
+  margin-top: 0.45rem;
+  font-size: 1.32rem; /* 21.1px */
+  line-height: 1.75rem; /* 28px */
+  color: var(--ink-700);
+}
+
+@media (max-width: 1024px) {
+  .product-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .products {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .products__inner {
+    padding: 0 1.25rem;
+  }
+
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .product-card {
+    height: auto;
+    padding: 1rem 0.5rem 1.4rem;
+  }
+
+  .product-card__media {
+    height: 11rem;
+  }
+
+  .product-card__name {
+    font-size: 1.05rem;
+  }
+
+  .product-card__copy {
+    margin-top: 0.4rem;
+    font-size: 0.88rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card__media {
+    height: 13rem;
+  }
+}
