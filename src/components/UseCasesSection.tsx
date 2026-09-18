@@ -1,5 +1,5 @@
 import check from '../assets/icons/icon-check.png'
-import doctor from '../assets/images/use-patients-doctor.png'
+import patientsBg from '../assets/images/use-patients-bg.jpg'
 import './UseCasesSection.css'
 
 const PATIENTS = [
@@ -36,7 +36,11 @@ export default function UseCasesSection() {
             ))}
           </ul>
         </div>
-        <img className="use-panel__doctor" src={doctor} alt="Provider holding a white Hyagen Medical bottle" />
+        <img
+          className="use-panel__doctor"
+          src={patientsBg}
+          alt="Provider holding a white Hyagen Medical bottle"
+        />
       </div>
 
       <div className="use-panel use-panel--team">
